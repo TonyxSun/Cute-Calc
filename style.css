@@ -1,36 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Urbanist:wght@500&display=swap');
-body {
-    background-color: aquamarine;
-    display: flex;
-    justify-content:center;
-    min-height: 100vh;
-
-    font-family: 'Manrope','Urbanist', sans-serif !important;
+* {
+    font-family: 'Manrope','Urbanist', sans-serif;
 }
+
+
+body {
+    background: linear-gradient(to top, #fcddd0 0%, #ace0f9 100%);   
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+}
+p{
+    margin:auto;
+}
+header {
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*fix if header text added*/
+    grid-template-rows: 2rem;
+    gap: 5px;
+    height: 2rem;
+    width: 10rem;
+    align-items: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    /* font-size: 0.8rem; */
+}
+
+footer {
+    height: auto;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 0rem; 
+    margin-bottom: 1rem;
+}
+
+footer:hover {
+    background-color: rgba(253, 253, 253, 0.5);
+}
+
+.card {
+    margin: 2px;
+    height: 1rem;
+    border-radius: 3px;
+    /* border: 1px dotted rgb(245, 255, 158); */
+}
+
+.card:hover {
+    transform: scale(1.15) perspective(1px);
+
+}
+
+#blue-red-color {
+    background-image: linear-gradient(to top, #fcddd0 0%, #ace0f9 100%);   
+}
+
+#pink-color {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+#warm-color {
+    background-image: linear-gradient(to right, #ffeca6 0%, #fcb69f 100%);
+}
+    
 .container{
     display: flex;
     margin: auto;
     justify-content: center;
     flex-direction: column;
-    width: 16rem; /* need responsive */
+    width: 16rem; /* need responsive (or not, since this size fits mobile screens :) */
     background-color: rgb(253, 253, 253);
     border-radius: 10px;
-    padding: 5px;
+    padding: 8px;
 }
 
 #display{
     margin: 1rem;
-    padding: 1rem 1rem 0rem 1rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
+    padding: 1rem 1rem 0.5rem 1rem;
+    display: grid;
+    grid-template-rows: 1.5rem minmax(2rem, auto);
+    word-wrap: break-word;
+    word-break: break-all;
     background-color: rgb(29, 33, 39);
     border-radius: 5px;
     color:rgb(230, 243, 255);
 }
 
-#currNumbers {
-    align-self: flex-end;
+#currExpression {
+    justify-self:right;
     font-size: x-large;
     margin-bottom: auto;
 }
@@ -51,17 +114,31 @@ body {
 button {
     background-color: rgba(230, 243, 255, 1);
     border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+
+}
+
+#clear-btn {
+    grid-column: 1/3;
+    background-color:rgba(253, 238, 214, 0.9);
+    margin: 1px;
+}
+
+#clear-btn:hover {
+    transform: scale(1.03) perspective(1px);
+    background-color:rgba(253, 238, 214, 0.6);
+
+}
+#equal-btn {
+    grid-column: 3/5;
 }
 
 button:hover {
     background-color: rgba(230, 243, 255, 0.6);
 }
-#clear-btn {
-    grid-column: 1/3;
-}
 
-#equal-btn {
-    grid-column: 3/5;
-}
+
+
 
 
