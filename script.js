@@ -1,9 +1,10 @@
+let currInput = null;
+let storedInput = null;
+
+const numberbtns = document.querySelectorAll('.number-btn')
 const add = (a, b) => a + b;
-
 const subtract = (a, b) => a - b;
-
 const multiply = (a, b) => a * b;
-
 const divide = (a, b) => a / b;
 
 const operate = function (operation, a, b) {
@@ -25,4 +26,3 @@ const operate = function (operation, a, b) {
     return ans;
 }
 
-operate(multiply, 3,4);

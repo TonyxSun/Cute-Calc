@@ -1,22 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Urbanist:wght@500&display=swap');
 body {
     background-color: aquamarine;
     display: flex;
-    justify-content: center;
-    /* align-content: center; */
+    justify-content:center;
+    min-height: 100vh;
 
+    font-family: 'Manrope','Urbanist', sans-serif !important;
 }
 .container{
     display: flex;
-    /* align-self: center; */
+    margin: auto;
+    justify-content: center;
     flex-direction: column;
     width: 16rem; /* need responsive */
     background-color: rgb(253, 253, 253);
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #display{
-    padding: 1rem;
-    height: 5rem;
+    margin: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 33, 39);
+    border-radius: 5px;
+    color:rgb(230, 243, 255);
+}
+
+#currNumbers {
+    align-self: flex-end;
+    font-size: x-large;
+    margin-bottom: auto;
 }
 
 .controls{
@@ -29,16 +45,16 @@ body {
     display: grid;
     height: 3rem;
     gap: 4px;
-    /* align-items: center;
-    justify-items: center; */
     grid-template-columns: repeat(4, 1fr);
 }
 
-.btn {
-    background-color: rgb(230, 243, 255);
-    /* align-self: normal; */
-    /* justify-self: normal; */
-    display:table-cell;
+button {
+    background-color: rgba(230, 243, 255, 1);
+    border: none;
+}
+
+button:hover {
+    background-color: rgba(230, 243, 255, 0.6);
 }
 #clear-btn {
     grid-column: 1/3;
