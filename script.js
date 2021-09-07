@@ -51,6 +51,8 @@ const divide = (a, b) => +a / +b;
 
 const operate = function (operation, a, b) {
     let ans = 0;
+    if (a == ".") a = 0;
+    if (b == ".") b = 0;
     switch (operation) {
         case '+':
             ans = add(a, b);
@@ -87,7 +89,7 @@ function updateDisplay() {
 
 function logNumber(e) {
     let number = e.key || e.target.textContent;
-    if (number == '.' && currIn4put && !displayingLastResult && currInput.includes('.')) return;
+    if (number == '.' && currInput && !displayingLastResult && currInput.includes('.')) return;
     if (displayingLastResult == true) {
         currInput = null;
         displayingLastResult = false;
