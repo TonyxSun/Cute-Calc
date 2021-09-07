@@ -128,14 +128,22 @@ button {
 #clear-btn:hover {
     transform: scale(1.03) perspective(1px);
     background-color:rgba(253, 238, 214, 0.6);
-
 }
+
+#clear-btn:active {
+    background-color:rgba(253, 238, 214, 0.2);
+}
+
 #equal-btn {
     grid-column: 3/5;
 }
 
 button:hover {
     background-color: rgba(230, 243, 255, 0.6);
+}
+
+button:active {
+    background-color: rgba(230, 243, 255, 0.3);
 }
 
 
