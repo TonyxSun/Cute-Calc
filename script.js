@@ -87,7 +87,7 @@ function updateDisplay() {
 
 function logNumber(e) {
     let number = e.key || e.target.textContent;
-    if (number == '.' && currInput.includes('.')) return;
+    if (number == '.' && currInput && !displayingLastResult && currInput.includes('.')) return;
     if (displayingLastResult == true) {
         currInput = null;
         displayingLastResult = false;
