@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <main class="container">
-      <div id="display">
-        <div id="storedNumbers">1 + </div>
-        <div id="currNumbers">111</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/3c7024af34.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Cute Calc</title>
+</head>
+
+<body>
+  <header>
+    <!-- <p>theme</p> -->
+    <div class="card" id="pink-color"></div>
+    <div class="card" id="blue-red-color"></div>
+    <div class="card" id="warm-color"></div>
+    </div>
+  </header>
+  <main class="container">
+    <div id="display">
+      <div id="storedExpression">(≧∇≦)ﾉ</div>
+      <div id="currExpression">Hi ~</div>
+    </div>
+    <div class="controls">
+      <div class="row">
+        <button id="clear-btn">CLEAR</button>
+        <button id="delete-btn">DEL</button>
+        <button id="add" class="function-btn">+</button>
       </div>
-      <div class="controls">
-        <div class="row">
-          <button id="clear-btn" class="function-btn">Clear</button>
-          <button id="off-btn" class="function-btn">OFF</button>
-          <button id="add-btn" class="function-btn">+</button>
-        </div>
-        <div class="row">
-          <button id="btn-1" class="number-btn">1</button>
-          <button id="btn-2" class="number-btn">2</button>
-          <button id="btn-3" class="number-btn">3</button>
-          <button id="subtract-btn" class="function-btn">-</button>
-        </div>
-        <div class="row">
-          <button id="btn-4" class="number-btn">4</button>
-          <button id="btn-5" class="number-btn">5</button>
-          <button id="btn-6" class="number-btn">6</button>
-          <button id="multiply-btn" class="function-btn">x</button>
-        </div>
-        <div class="row">
-          <button id="btn-7" class="number-btn">7</button>
-          <button id="btn-8" class="number-btn">8</button>
-          <button id="btn-9" class="number-btn">9</button>
-          <button id="divide-btn" class="function-btn">/</button>
-        </div>
-        <div class="row">
-          <button id="decimal-btn" class="function-btn">.</button>
-          <button id="btn-0" class="number-btn">0</button>
-          <button id="equal-btn" class="function-btn">=</button>
-        </div>
+      <div class="row">
+        <button id="btn-1" class="number-btn">1</button>
+        <button id="btn-2" class="number-btn">2</button>
+        <button id="btn-3" class="number-btn">3</button>
+        <button id="subtract" class="function-btn">-</button>
       </div>
-    </main>
-  </body>
+      <div class="row">
+        <button id="btn-4" class="number-btn">4</button>
+        <button id="btn-5" class="number-btn">5</button>
+        <button id="btn-6" class="number-btn">6</button>
+        <button id="multiply" class="function-btn">x</button>
+      </div>
+      <div class="row">
+        <button id="btn-7" class="number-btn">7</button>
+        <button id="btn-8" class="number-btn">8</button>
+        <button id="btn-9" class="number-btn">9</button>
+        <button id="divide" class="function-btn">/</button>
+      </div>
+      <div class="row">
+        <button id="decimal-btn" class="number-btn">.</button>
+        <button id="btn-0" class="number-btn">0</button>
+        <button id="equal-btn">=</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p style="word-spacing: 2px;">Made with 💗 by <a href="https://github.com/tonyxsun"
+        style="color: black; text-decoration: none">TonyxSun
+        <i class="fab fa-github"></i></a></p>
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+  </footer>
+
+</body>
+
 </html>
