@@ -155,3 +155,10 @@ equalButton.addEventListener('click', solve);
 clearButton.addEventListener('click', clear);
 deleteButton.addEventListener('click', del);
 
+window.addEventListener('keydown', function (e) {
+    var key = e.key;
+    if (key == 'Enter') {
+      e.stopPropagation();
+      e.preventDefault();
+    }}) 
+    // prevent enter key from triggering automatically
