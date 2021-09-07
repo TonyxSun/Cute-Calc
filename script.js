@@ -36,7 +36,7 @@ function keyboardInput(e){
         logNumber(e);
     } else if ("+-*/".includes(e.key)){
         logFunction(e);
-    } else if (e.key == '='){
+    } else if (e.key == '=' || e.key == 'Enter'){
         solve();
     } else if (e.key == "Backspace"){
         del();
@@ -87,11 +87,12 @@ function updateDisplay() {
 
 function logNumber(e) {
     let number = e.key || e.target.textContent;
-    if (number == '.' && currInput && !displayingLastResult && currInput.includes('.')) return;
+    if (number == '.' && currIn4put && !displayingLastResult && currInput.includes('.')) return;
     if (displayingLastResult == true) {
         currInput = null;
         displayingLastResult = false;
     }
+    if (currInput && currInput.length > 18) return;
     currInput ? currInput += number : currInput = number;
     updateDisplay();
 }
