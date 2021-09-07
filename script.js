@@ -13,7 +13,7 @@ const clearButton = document.querySelector('#clear-btn');
 const equalButton = document.querySelector('#equal-btn');
 const deleteButton = document.querySelector('#delete-btn');
 const colorCards = document.querySelectorAll(".card");
-const background = document.querySelector('body')
+const background = document.querySelector('body');
 
 const colorChange = function (e) {
     background.style.background = "";
@@ -30,6 +30,20 @@ const colorChange = function (e) {
             break;
     }
 }
+
+function keyboardInput(e){
+    if (e.key == '.' || (e.key >= 0 && e.key <= 9)){
+        logNumber(e);
+    } else if ("+-*/".includes(e.key)){
+        logFunction(e);
+    } else if (e.key == '='){
+        solve();
+    } else if (e.key == "Backspace"){
+        del();
+    } else if (e.key == 'Escape'){
+        clear();
+    }
+}
 const add = (a, b) => +a + +b;
 const subtract = (a, b) => +a - +b;
 const multiply = (a, b) => +a * +b;
@@ -38,16 +52,17 @@ const divide = (a, b) => +a / +b;
 const operate = function (operation, a, b) {
     let ans = 0;
     switch (operation) {
-        case 'add':
+        case '+':
             ans = add(a, b);
             break;
-        case 'subtract':
+        case '-':
             ans = subtract(a, b);
             break;
-        case 'multiply':
+        case 'x':
+        case '*':
             ans = multiply(a, b);
             break;
-        case 'divide':
+        case '/':
             if (!Number(b)) {
                 errorMessage();
                 return errorCode;
@@ -71,28 +86,31 @@ function updateDisplay() {
 }
 
 function logNumber(e) {
+    let number = e.key || e.target.textContent;
+    if (!Number(number) && !Number(currInput + number)) return;
     if (displayingLastResult == true) {
         currInput = null;
         displayingLastResult = false;
     }
-    currInput ? currInput += e.target.textContent : currInput = e.target.textContent;
+    currInput ? currInput += number : currInput = number;
     updateDisplay();
 }
 
 function logFunction(e) {
+    let operation = e.key || e.target.id;
     if (!OPERATION && currInput && currInput != errorCode) {
-        OPERATION = e.target.id;
+        OPERATION = operation;
         storedInput = Number(currInput);
-        storedOutput = `${currInput} ${e.target.textContent}`;
+        storedOutput = `${currInput} ${operation}`;
         currInput = null;
         updateDisplay();
     }
     else if (currInput && currInput != errorCode) {
         let ans = operate(OPERATION, storedInput, currInput);
         if (ans == errorCode) return;
-        OPERATION = e.target.id;
+        OPERATION = e.key || e.target.id;
         storedInput = Number(ans);
-        storedOutput = `${ans} ${e.target.textContent}`;
+        storedOutput = `${ans} ${e.key || e.target.id}`;
         currInput = null;
         updateDisplay();
     }
@@ -120,16 +138,17 @@ function clear() {
     updateDisplay();
 }
 
-colorCards.forEach(card => card.addEventListener('click', colorChange));
-
-numberButtons.forEach(btn => btn.addEventListener('click', logNumber));
-functionButtons.forEach(btn => btn.addEventListener('click', logFunction));
-equalButton.addEventListener('click', solve);
-clearButton.addEventListener('click', clear);
-deleteButton.addEventListener('click', () => {
+function del(){
     if (!displayingLastResult && currInput) {
         currInput = String(currInput).substring(0, currInput.length - 1);
         updateDisplay();
     }
-});
+}
+colorCards.forEach(card => card.addEventListener('click', colorChange));
+window.addEventListener('keydown', keyboardInput);
+numberButtons.forEach(btn => btn.addEventListener('click', logNumber));
+functionButtons.forEach(btn => btn.addEventListener('click', logFunction));
+equalButton.addEventListener('click', solve);
+clearButton.addEventListener('click', clear);
+deleteButton.addEventListener('click', del);
 
