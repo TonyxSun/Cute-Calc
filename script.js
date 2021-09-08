@@ -120,7 +120,7 @@ function logFunction(e) {
 }
 
 function solve() {
-    if (OPERATION && storedInput && currInput) {
+    if (OPERATION && typeof storedInput == 'number' && currInput) {
         let ans = operate(OPERATION, storedInput, currInput);
         if (ans == errorCode) return;
         storedInput = null;
