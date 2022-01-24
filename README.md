@@ -15,7 +15,7 @@ A modern calculator app built with JavaScript! Created with respect to executive
 * key pressing sound?
 
 
-
+### Screenshots
 
 ![image](https://user-images.githubusercontent.com/68176295/150867871-048b3e4d-98fd-4043-a724-e6931123d2d0.png)
 ![image](https://user-images.githubusercontent.com/68176295/150867948-b57aa138-ee64-4b11-a32c-6059e8f65b8a.png)
