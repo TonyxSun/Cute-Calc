@@ -13,3 +13,6 @@ A modern calculator app built with JavaScript! Created with respect to executive
 ### To Do's
 * add more animations!
 * key pressing sound?
+
+
+![image](https://user-images.githubusercontent.com/68176295/150867760-eadc2dfb-98a4-48f6-8ce7-82b3160676c5.png)
