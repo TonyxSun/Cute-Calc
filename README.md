@@ -3,6 +3,8 @@
 
 A modern calculator app built with JavaScript! Created with respect to executive orders from my 6-year-old sister 😆 .
 
+Code is 100% my own, did not follow any online tutorials.
+
 ### What I've Learnt
 * ES6
 * Keybindings
