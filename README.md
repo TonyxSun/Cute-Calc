@@ -1,9 +1,9 @@
 # Calculator-App
 ![Website](https://img.shields.io/website?label=demo&up_message=online&url=https%3A%2F%2Ftonyxsun.github.io%2FCute-Calc%2F)
 
-A modern calculator app built with JavaScript! Created with respect to executive orders from my 6-year-old sister 😆 .
+A modern calculator app built with JavaScript! Created with respect to orders from my 6-year-old sister 😆 .
 
-Code is 100% my own, did not follow any online tutorials.
+Code is 100% my own.
 
 ### What I've Learnt
 * ES6
